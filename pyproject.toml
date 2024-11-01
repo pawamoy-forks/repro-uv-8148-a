@@ -1,0 +1,27 @@
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[project]
+name = "repro-uv-8148-a"
+description = ""
+authors = [{name = "Timothée Mazzucotelli", email = "dev@pawamoy.fr"}]
+license = {text = "ISC"}
+readme = "README.md"
+requires-python = ">=3.9"
+keywords = []
+dynamic = ["version"]
+dependencies = [
+    "repro-uv-8148-a",
+]
+
+[tool.pdm]
+version = {source = "scm"}
+
+[tool.pdm.build]
+package-dir = "src"
+
+[tool.uv]
+dev-dependencies = [
+    "repro-uv-8148-b>=0.1",
+]
