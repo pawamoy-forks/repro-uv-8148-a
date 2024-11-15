@@ -11,9 +11,7 @@ readme = "README.md"
 requires-python = ">=3.9"
 keywords = []
 dynamic = ["version"]
-dependencies = [
-    "repro-uv-8148-a",
-]
+dependencies = []
 
 [tool.pdm]
 version = {source = "scm"}
