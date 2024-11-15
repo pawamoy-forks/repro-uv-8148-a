@@ -103,7 +103,7 @@ drwxr-xr-x 2 pawamoy users 4.0K Nov 15 16:12 repro_uv_8148_a-1.0.1.dist-info
 
 ## Attempt: declaring sources
 
-Declaring sources like following has no effect: the project is still not installed in editable mode:
+Declaring sources like following has no effect: the project is still not installed in editable mode, and when fetched from PyPI, the dev-dependency `uv-repro-8148-b` is still not installed:
 
 ```toml
 [tool.uv.sources]
