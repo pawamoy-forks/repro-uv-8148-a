@@ -19,7 +19,13 @@ version = {source = "scm"}
 [tool.pdm.build]
 package-dir = "src"
 
-[tool.uv]
-dev-dependencies = [
+[dependency-groups]
+dev = [
     "repro-uv-8148-b>=0.1",
 ]
+
+[tool.uv]
+# Tell uv to ignore constraints on the main package.
+# This is needed when the current project doesn't have Git tags (fork, CI).
+override-dependencies = ["repro-uv-8148-a"]
+sources = { repro-uv-8148-a = { workspace = true } }
